@@ -25,6 +25,9 @@ function minpos($array){  // находит минимальное положи�
 
 function maxneg($array){ //находит максимальное отрицательное 
     $maxv = minimal($array);
+    if($maxv > 0){
+        return false;
+    }
     for($i = 0; $i < count($array); $i++){
         if($array[$i] < 0 && $array[$i] > $maxv){
             $maxv = $array[$i];
